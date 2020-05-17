@@ -16,9 +16,42 @@ $buku = query("SELECT * FROM buku WHERE id = $id")[0];
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" href="../css/materialize.css"/>
+	<script src="../js/materialize.js"></script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	
+
+	<!--My Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Viga&display=swap" rel="stylesheet">
+
+	
+	<title></title>
+	<style>
+		img {
+			
+	width: 260px;
+	height: 260px;
+	border: 8px solid #331a00;
+	box-shadow: 7px 7px 7px 7px rgba(0,0,0,0.5);
+
+		}
+
+		body {
+			background-image: url(../assets/img/bg5.jpg) !important;
+			background-size: cover;
+			text-align: center;
+			color: white;
+			font-family: 'Pangolin', cursive !important;
+			font-size: 20px;
+		}
+
+		
+	</style>
 </head>
-<body bgcolor="Bisque">
+<body>
+</head>
+<body>
 
 	<div class="container">
 	<div class="img">
@@ -30,6 +63,6 @@ $buku = query("SELECT * FROM buku WHERE id = $id")[0];
 		<p><?= $buku["halaman"]. " halaman" ?></p>
 		<p><?="Terbit ". $buku["terbit"]; ?></p>
 	</div>
-	<button class="tombol-kembali"><a href="../index.php">Back</button>
+	<a href = menu.php class="waves-effect #795548 brown btn-small"><i class="material-icons left">arrow_back</i>Back</a>
 </body>
 </html>

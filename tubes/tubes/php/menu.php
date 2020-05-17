@@ -1,35 +1,23 @@
 <?php
-session_start();
+	require 'function.php';
 
-if(!isset($_SESSION["username"])) {
-	header("Location: login.php");
-	exit;
-}
-
-//menghubungkan dengan file php lainnya
-require 'function.php';
-
-if (isset($_GET['cari'])) {
-	$keyword = $_GET['keyword'];
-	$buku = query("SELECT * FROM buku 
-	  WHERE
-	  id LIKE '%$keyword%' OR
-	  judul LIKE '%$keyword%' OR 
-	  penulis LIKE '%$keyword%' OR
-	  halaman LIKE '%$keyword%' OR 
-	  terbit LIKE '%$keyword%' ");
-
-}else {
+	if(isset($_GET['cari'])) {
+		$keyword = $_GET['keyword'];
+		$buku = query ("SELECT * FROM
+			buku WHERE 
+			id LIKE '%$keyword%' OR 
+			judul LIKE '%$keyword%' OR 
+			penulis LIKE '%$keyword%' OR 
+			halaman LIKE '%$keyword%' OR 
+			terbit LIKE '%$keyword%' ");
+	}else {
 
 	$buku = query("SELECT * FROM buku");
-}
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" href="../css/materialize.css"/>
+}
+	?>
+
+<link rel="stylesheet" href="../css/materialize.css"/>
 	<script src="../js/materialize.js"></script>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -55,9 +43,8 @@ if (isset($_GET['cari'])) {
 
           <li><a href="../index.php">HOME</a></li>
           <li><a href="menu.php">MENU</a></li>
-           <li><a href="admin.php">ADMIN</a></li>
-          <li><a href = "logout.php" class="waves-effect #bcaaa4 brown lighten-3 btn">LOGOUT</a></li>
-         
+          <li><a href = "login.php" class="waves-effect #bcaaa4 brown lighten-3 btn">SIGN IN</a></li>
+          <li><a href = "registrasi.php" class="waves-effect #bcaaa4 brown lighten-3 btn">REGISTER</a></li>
           
         </ul>
       </div>
@@ -69,9 +56,8 @@ if (isset($_GET['cari'])) {
 <ul class="sidenav" id="mobile-nav">
   <li><a href="../index.php">HOME</a></li>
   <li><a href="menu.php">MENU</a></li>
-  <li><a href="admin.php">ADMIN</a></li>
-  <li><a href = "logout.php" class="waves-effect #bcaaa4 brown lighten-3 btn">LOGOUT</a></li>
-  
+  <li><a href ="login.php" class="waves-effect #bcaaa4 brown lighten-3">SIGN IN</a></li>
+  <li><a href = "registrasi.php" class="waves-effect #bcaaa4 brown lighten-3">REGISTER</a></li>
 </ul>
 		<!--Section-->
 <section id="services" class="services #795548 brown">
@@ -89,9 +75,6 @@ if (isset($_GET['cari'])) {
 		</tr>
 		<?php else : ?>
 
-	<label class="add" for="tambah"><i class="material-icons">add_circle_outline</i></label><button class="btn-small #bcaaa4 brown lighten-3" type="submit" name="tambah"><a href=tambah.php>Tambah Data</a></button>
-	</form>
-
 	<h1 class="light center white-text text-white">Daftar Buku</h1>
     
  
@@ -108,8 +91,7 @@ if (isset($_GET['cari'])) {
           <span class="card-title black-text text-darken-3"><?= $bk['judul'] ?></span>
         </div>
          <div class="card-action">
-          <a href="ubah.php?id=<?= $bk['id'] ?>" class="waves-effect #4e342e brown darken-3 btn">Ubah</a>
-          <a href="hapus.php?id=<?= $bk['id'] ?>" class="waves-effect #4e342e brown darken-3 btn">Hapus</a>
+          <a href="detail.php?id=<?= $bk['id']; ?>" class="waves-effect #4e342e brown darken-3 btn">Lihat Detail</a>
       </div>
   </div>
 </div>
@@ -117,13 +99,32 @@ if (isset($_GET['cari'])) {
 
 
 <?php endif; ?>
-
-  	
-	
-	
-
 </div>
 </div>
 </section>
+  	
+	
+<!--FYI-->
+<section id="contact" class="contact #4e342e brown darken-3">
+	<div class="container">
+		<div class="row">
+				<div class="card-panel #bcaaa4 brown lighten-3 center white-text">
+					<i class="material-icons">info</i>
+					<h3>~I Hope You Enjoy With Our Website~</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!--JavaScript-->
+<script type="text/javascript" src="../js/materialize.min.js"></script>
+<script>
+	const sideNav = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(sideNav);
+
+	
+</script>
 </body>
 </html>
