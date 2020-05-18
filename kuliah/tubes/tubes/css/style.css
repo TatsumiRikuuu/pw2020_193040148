@@ -1,0 +1,147 @@
+.brand-logo {
+  font-family: 'Pangolin', cursive; 
+  font-size: 40px;
+}
+
+.tulisan {
+	font-family: 'Pangolin', cursive !important; 
+	margin-top: 80px;
+	text-shadow: 3px 3px 3px rgba(0,0,0, 0.4);
+	font-size: 40px;
+	margin-bottom: auto;
+
+
+}
+
+section {
+	padding: 20px 0;
+	font-family: 'Pangolin', cursive !important; 
+}
+
+.card {
+	overflow: hidden;
+	width: 250px !important;
+	height: 550px !important;
+
+}
+
+.card-image {
+	width: 250px !important;
+	height: 300px !important;
+}
+
+.card-title {
+	padding-top: 70px !important;
+	font-size: 20px !important;
+}
+
+/*login session*/
+.tulisan_login{
+    text-align: center;
+    /*membuat semua huruf menjadi kapital*/
+    text-transform: uppercase;
+}
+ 
+.kotak_login{
+    width: 350px;
+    box-shadow: -20px 20px 20px -20px grey;
+    border-radius: 25px;
+    border :1px solid grey;
+    /*meletakkan form ke tengah*/
+    margin: 80px auto;
+    padding: 30px 20px;
+}
+ 
+label{
+    font-size: 11pt;
+}
+.form_login{
+    /*membuat lebar form penuh*/
+    box-sizing : border-box; 
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+ .foto{
+  float: left;
+ }
+.tombol_login{
+    background: #331a00;
+    color: white !important;
+    font-size: 11pt;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-family: 'Pangolin', cursive; 
+}
+ .tombol_registrasi{
+    background: brown;
+    color: white;
+    font-size: 11pt;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+ }
+.remember{
+float: left;
+color: red;
+text-shadow: 1px 1px 1px black;
+}
+
+.index {
+	margin-top: 500px;
+}
+
+.background {
+	background-image: url(../assets/img/bg3.jpg);
+	background-size: cover;
+}
+
+.parallax-container {
+    height: 380px;
+   font-family: 'Pangolin', cursive; 
+
+}
+
+.book img {
+	width:  200px !important;
+}
+
+h2 {
+       font-family: 'Pangolin', cursive; 
+
+
+}
+
+h5 {
+	 font-family: 'Pangolin', cursive;
+}
+
+h3 {
+	 font-family: 'Pangolin', cursive;
+
+}
+
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+.background {
+	background-image: url(../assets/img/bg5.jpg) !important;
+}
+
+.registrasi {
+	color: white !important;
+}
+
+
+

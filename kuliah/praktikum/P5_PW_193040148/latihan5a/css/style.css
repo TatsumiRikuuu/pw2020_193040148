@@ -1,0 +1,18 @@
+body {
+	font-family: "lucida console", Courier, monospace;	
+}
+
+img {
+	width: 100px;
+	height: 100px;
+}
+
+table {
+	width: 800px;
+	height: 600px;
+	margin: auto;
+}
+
+tr{
+	font-size: 15px;
+}
